@@ -3,58 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Data Science Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <title>Portfolio von [Dein Name]</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>[Sayed Sadat]</h1>
-        <p>Data Science Student & Analyst</p>
-        <nav>
-            <a href="#ueber-mich">Über mich</a>
-            <a href="#projekte">Projekte</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-    </header>
+<div class="container">
+    
+    <aside class="sidebar">
+        <img src="https://via.placeholder.com/150" alt="Profilbild" class="profile-pic">
+        
+        <h1>[Sayed Omran Sadat]</h1>
+        <span class="role">Data Science Student</span>
+        
+        <div class="social-links">
+            <a href="https://github.com/seyedsadat2006-ui">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Email</a>
+        </div>
 
-    <main>
-        <section id="ueber-mich">
-            <h2>Über mich</h2>
-            <p>Hallo! Ich studiere derzeit Data Science und interessiere mich besonders für Machine Learning und Datenvisualisierung. Auf dieser Seite dokumentiere ich meinen Lernweg.</p>
-        </section>
+        <br><br>
+        
+        <h3>Über mich</h3>
+        <p style="font-size: 0.9rem; color: #555;">
+            Ich studiere Data Science und liebe es, Muster in Daten zu finden. 
+            Mein Fokus liegt auf Machine Learning und statistischer Analyse.
+        </p>
 
-        <section>
-            <h2>Meine Skills</h2>
-            <ul>
-                <li><strong>Sprachen:</strong> Python, SQL, C</li>
-                <li><strong>Tools:</strong> Jupyter, Git, Pandas, Scikit-Learn</li>
-                <li><strong>Soft Skills:</strong> Problemlösung, Kommunikation</li>
-            </ul>
-        </section>
+        <br>
 
-        <section id="projekte">
-            <h2>Projekte</h2>
-            <p>Hier sind einige meiner aktuellen Arbeiten:</p>
-            
-            <article>
-                <h3>Projekt 1: Datenanalyse [Platzhalter]</h3>
-                <p>Eine kurze Beschreibung, was du hier analysiert hast (z.B. Titanic Dataset).</p>
-                <a href="#">Link zum Code (folgt)</a>
-            </article>
+        <h3>Skills</h3>
+        <div class="skills-container">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">Scikit-Learn</span>
+            <span class="skill-tag">Tableau</span>
+        </div>
+    </aside>
 
-            <article>
-                <h3>Projekt 2: Visualisierung [Platzhalter]</h3>
-                <p>Beschreibung eines weiteren Projekts.</p>
-                <a href="#">Link zum Code (folgt)</a>
-            </article>
-        </section>
+
+    <main class="main-content">
+        
+        <h2 class="section-title">Projekte</h2>
+
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Mietpreis Analyse</h3>
+                <div class="skills-container" style="margin-bottom: 10px;">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Matplotlib</span>
+                </div>
+                <p>Analyse von Mietpreisen in Großstädten. Identifikation der wichtigsten Preistreiber durch Regression.</p>
+                <a href="#">Mehr lesen &rarr;</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Churn Prediction</h3>
+                <div class="skills-container" style="margin-bottom: 10px;">
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Pandas</span>
+                </div>
+                <p>Ein Modell, das vorhersagt, ob Kunden kündigen werden, basierend auf ihrem Nutzungsverhalten.</p>
+                <a href="#">Mehr lesen &rarr;</a>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 40px;">Ausbildung</h2>
+        
+        <div style="margin-bottom: 20px;">
+            <h3 style="margin-bottom: 5px;">Data Science Studium</h3>
+            <span style="color: #666; font-size: 0.9rem;">Universität xy | 2023 - Heute</span>
+            <p>Schwerpunkte: Statistik, Algorithmen, Datenbanken.</p>
+        </div>
+
     </main>
 
-    <footer id="kontakt">
-        <p>Erstellt mit GitHub Pages.</p>
-        <p><a href="https://github.com/seyedsadat2006-ui/SayedSadat.github.io">Mein GitHub Profil</a></p>
-    </footer>
+</div>
 
 </body>
 </html>
