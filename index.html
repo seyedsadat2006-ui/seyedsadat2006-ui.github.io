@@ -1,105 +1,205 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio von Sayed Omran Sadat</title>
+    <title>Sayed Omran Sadat | Data Science Portfolio</title>
+    <meta name="description" content="Data Science Student an der TU Hamburg mit Fokus auf Datenanalyse, Prozessoptimierung und datengetriebene Entscheidungen.">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<header class="site-header">
+    <div class="nav-container">
+        <div class="brand"><a href="#home">Sayed Omran Sadat</a></div>
+        <nav class="nav-links" id="siteNav">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <div class="dropdown">
+                <button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false">More</button>
+                <div class="dropdown-content">
+                    <a href="https://github.com/seyedsadat2006-ui" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://linkedin.com/in/USERNAME" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="assets/CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+                </div>
+            </div>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+</header>
+
+<div class="container" id="home">
     <div class="theme-toggle-container">
         <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Theme umschalten">🌙</button>
     </div>
     
     <aside class="sidebar">
-        <img src="profilbild.png" alt="Profilbild von Sayed Omran Sadat" class="profile-pic">
+        <img src="profilbild.png" alt="Profilbild von Sayed Omran Sadat" class="profile-pic" loading="lazy">
         
         <h1>Sayed Omran Sadat</h1>
         <span class="role">Data Science Student</span>
         
-        <div class="social-links">
-            <a href="https://github.com/seyedsadat2006-ui">GitHub</a>
-            <a href="mailto:seyedsadat2006@gmail.com">seyedsadat2006@gmail.com</a>
-            <a href="tel:017656872381">017656872381</a>
+        <div class="social-links" id="contact">
+            <a class="has-tooltip" data-tooltip="View GitHub profile" href="https://github.com/seyedsadat2006-ui" target="_blank" rel="noopener">GitHub</a>
+            <a class="has-tooltip" data-tooltip="Send me an email" href="mailto:seyedsadat2006@gmail.com">seyedsadat2006@gmail.com</a>
+            <a class="has-tooltip" data-tooltip="Connect on LinkedIn" href="https://linkedin.com/in/USERNAME" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="has-tooltip" data-tooltip="Open CV (PDF)" href="assets/CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
         </div>
 
         <br><br>
         
-        <h3>Über mich</h3>
+        <h3 id="about">About</h3>
         <p class="muted-text">
-            Ich studiere Data Science im ersten Fachsemester und bin leidenschaftlich daran interessiert, Daten zu analysieren und sinnvolle Erkenntnisse zu gewinnen. Mein Fokus liegt auf der Anwendung statistischer Methoden und dem Entdecken von Mustern, die zur Lösung komplexer Probleme beitragen können.
+            I study Data Science (1st semester) at Hamburg University of Technology and I am especially interested in data analysis and process optimization. I currently work with Python (Pandas) and visualizations to derive clear insights from data. I am seeking working‑student or internship opportunities in Data/Analytics.
         </p>
 
         <br>
 
-        <h3>Skills</h3>
-        <div class="skills-container">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Microsoft Office (Word, Excel, PowerPoint)</span>
-            <span class="skill-tag">Effiziente Internetrecherche</span>
-            <span class="skill-tag">Erfahrung mit KI-Tools</span>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">Git</span>
+        <h3 id="skills">Skills</h3>
+        <div class="skills-block">
+            <div class="skills-category reveal">
+                <h4>Programming</h4>
+                <div class="skills-container">
+                    <span class="skill-tag">Python (Pandas/NumPy) <span class="skill-level">Intermediate</span></span>
+                    <span class="skill-tag">C (Uni) <span class="skill-level">Beginner</span></span>
+                    <span class="skill-tag">Git (Basics) <span class="skill-level">Beginner</span></span>
+                </div>
+            </div>
+            <div class="skills-category reveal">
+                <h4>Tools</h4>
+                <div class="skills-container">
+                    <span class="skill-tag">Excel</span>
+                    <span class="skill-tag">Microsoft Office</span>
+                </div>
+            </div>
+            <div class="skills-category reveal">
+                <h4>Data</h4>
+                <div class="skills-container">
+                    <span class="skill-tag">Data Cleaning</span>
+                    <span class="skill-tag">EDA</span>
+                    <span class="skill-tag">Data Visualization</span>
+                </div>
+            </div>
         </div>
     </aside>
 
 
     <main class="main-content">
-        
-        <h2 class="section-title">Projekte</h2>
+<h2 class="section-title" id="projects">Projects</h2>
 
         <div class="projects-section">
-        <div class="project-card">
-            <div class="project-info">
-                <h3>Amazon Logistics Data Analysis</h3>
-                <p>Dieses Projekt analysiert das Logistiksystem von Amazon mit Fokus auf Lieferzeiten, Effizienz und Optimierungsmöglichkeiten. Ziel ist es, mithilfe von Datenanalyse Engpässe im Lieferprozess zu erkennen und Verbesserungen vorzuschlagen.</p>
-                <ul class="project-list">
-                    <li>Analyse von Lieferzeiten und Versandprozessen</li>
-                    <li>Identifikation von Engpässen in der Logistik</li>
-                    <li>Visualisierung von Daten (Diagramme/Statistiken)</li>
-                    <li>Nutzung von Data-Science-Methoden zur Optimierung</li>
-                </ul>
-                <div class="skills-container" style="margin-top: 12px;">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">Excel</span>
-                    <span class="skill-tag">Datenvisualisierung (Matplotlib)</span>
+            <div class="project-card has-media reveal">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Amazon Logistics Data Analysis</h3>
+                        <div class="project-actions">
+                            <a class="btn" href="assets/AMZ-Poster.pdf" target="_blank" rel="noopener">📄 View poster</a>
+                            <button class="btn secondary" type="button" data-modal-target="#modal-amz">Details</button>
+                        </div>
+                    </div>
+                    <p class="project-desc">Analyzes Amazon’s logistics system with a focus on delivery times, efficiency, and optimization. Goal: detect bottlenecks and propose data-driven improvements.</p>
+                    <div class="project-columns">
+                        <div>
+                            <h4>Approach</h4>
+                            <ul>
+                                <li>Analyze delivery times and shipping workflows</li>
+                                <li>Identify logistics bottlenecks across hubs</li>
+                                <li>Visualize KPIs with charts and dashboards</li>
+                                <li>Apply data‑science methods to optimize flow</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Results</h4>
+                            <ul>
+                                <li>Identified bottlenecks in delivery flow</li>
+                                <li>Outlined optimization opportunities for routing</li>
+                                <li>Built KPI dashboards for operations tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+<div class="skills-container">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Matplotlib</span>
+                    </div>
                 </div>
-                <p class="project-goal">Dieses Projekt zeigt meine Fähigkeiten im Bereich Data Science, Datenanalyse und logisches Denken. Es demonstriert, wie Daten genutzt werden können, um reale Geschäftsprozesse zu verbessern.</p>
-                <a href="AMZ%20Poster.pdf" class="project-link" target="_blank" rel="noopener">🧾 Projektposter ansehen</a>
+                <div class="project-media">
+                    <iframe src="assets/AMZ-Poster.pdf#view=FitH" title="Amazon Logistics Poster" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Project 2</h3>
+                        <div class="project-actions">
+                            <a class="btn secondary disabled" href="#" aria-disabled="true">Repo</a>
+                            <a class="btn secondary disabled" href="#" aria-disabled="true">Demo</a>
+                        </div>
+                    </div>
+                    <p class="project-desc">Short problem statement and motivation (placeholder).</p>
+                    <div class="project-columns">
+                        <div>
+                            <h4>Approach</h4>
+                            <ul>
+                                <li>Placeholder: Collect and clean data</li>
+                                <li>Placeholder: Build model/analysis</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Results</h4>
+                            <ul>
+                                <li>Placeholder: Key findings</li>
+                                <li>Placeholder: Visualization/report</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skills-container">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Matplotlib</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="project-card">
-            <div class="project-info">
-                <h3>Projekt 2</h3>
-                <p>Hinweis: Hier wird Projekt 2 erklärt.</p>
-            </div>
-        </div>
-        </div>
-
-        <div class="education-section">
-        <h2 class="section-title">Ausbildung</h2>
+        <div class="education-section reveal">
+        <h2 class="section-title" id="education">Education</h2>
         
         <div style="margin-bottom: 20px;">
-            <h3 style="margin-bottom: 5px;">Technische Universität Hamburg</h3>
-            <span class="meta-text">seit 2025 bis jetzt</span>
-            <p>Data Science Studium.</p>
+            <h3 style="margin-bottom: 5px;">Hamburg University of Technology (TUHH)</h3>
+            <span class="meta-text">B.Sc. Data Science — since 2025</span>
         </div>
 
         <div style="margin-bottom: 20px;">
-            <h3 style="margin-bottom: 5px;">Stadtteilschule Poppenbüttel</h3>
-            <span class="meta-text">2022 - 2025</span>
-            <p>Allgemeine Hochschulreife (voraussichtlich 2025).</p>
+            <h3 style="margin-bottom: 5px;">Stadtteilschule Poppenbüttel (Germany)</h3>
+            <span class="meta-text">General University Entrance Qualification (Abitur) — 2022–2025</span>
         </div>
 
         </div>
-
-    </main>
+</main>
 
 </div>
+
+<div class="modal" id="modal-amz" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-amz-title">
+        <button class="modal-close" type="button" data-modal-close aria-label="Close">&times;</button>
+        <h3 id="modal-amz-title">Amazon Logistics Data Analysis</h3>
+        <p>Deep dive into delivery-time analysis, bottleneck identification, and optimization opportunities across Amazon's logistics flow. Includes KPI tracking and dashboard insights.</p>
+        <ul>
+            <li>Focus: delivery time variance and throughput</li>
+            <li>Outputs: bottleneck map, KPI dashboard, optimization recommendations</li>
+            <li>Tools: Python, Pandas, Excel, Matplotlib</li>
+        </ul>
+    </div>
+</div>
+
+<button id="scrollTopBtn" class="scroll-top" title="Back to top">↑</button>
 
 <script>
 (function () {
@@ -119,6 +219,94 @@
             localStorage.setItem('theme', next);
             btn.textContent = next === 'dark' ? '🌙' : '☀️';
             btn.setAttribute('aria-pressed', next === 'dark');
+        });
+    }
+
+    // Scroll reveal
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        revealEls.forEach(function(el) { observer.observe(el); });
+    } else {
+        revealEls.forEach(function(el) { el.classList.add('is-visible'); });
+    }
+
+    // Modal handling
+    var openButtons = document.querySelectorAll('[data-modal-target]');
+    var closeButtons = document.querySelectorAll('[data-modal-close]');
+
+    openButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var target = document.querySelector(btn.getAttribute('data-modal-target'));
+            if (target) {
+                target.classList.add('open');
+                target.setAttribute('aria-hidden', 'false');
+            }
+        });
+    });
+
+    closeButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var modal = btn.closest('.modal');
+            if (modal) {
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+            }
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('modal')) {
+            e.target.classList.remove('open');
+            e.target.setAttribute('aria-hidden', 'true');
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal.open').forEach(function(m) {
+                m.classList.remove('open');
+                m.setAttribute('aria-hidden', 'true');
+            });
+        }
+    });
+
+    // Scroll-to-top button
+    var scrollBtn = document.getElementById('scrollTopBtn');
+    if (scrollBtn) {
+        window.addEventListener('scroll', function () {
+            if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+        scrollBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // Mobile nav toggle
+    var navToggle = document.getElementById('navToggle');
+    var siteHeader = document.querySelector('.site-header');
+    if (navToggle && siteHeader) {
+        navToggle.addEventListener('click', function () {
+            var isOpen = siteHeader.classList.toggle('nav-open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+        var navLinks = siteHeader.querySelectorAll('a[href^="#"]');
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                siteHeader.classList.remove('nav-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
         });
     }
 })();
