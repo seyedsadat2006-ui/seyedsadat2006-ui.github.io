@@ -817,3 +817,39 @@ html[data-theme="dark"] .modal-content {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
 }
+
+
+@media (max-width: 1200px) {
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-links {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        right: 16px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        box-shadow: var(--shadow-md);
+        z-index: 1001;
+    }
+    .site-header.nav-open .nav-links {
+        display: flex !important;
+    }
+    .dropdown { width: 100%; }
+    .dropdown-content {
+        position: static;
+        display: block;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+    .dropdown-content a { padding-left: 0; }
+}
